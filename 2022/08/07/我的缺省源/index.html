@@ -6,49 +6,106 @@
   <meta name="viewport" content="width = device-width, initial-scale = 1.0">
   <title>Ftt2333&#39;s Nest</title>
   <link rel="icon" href="/images/favicon.ico">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.9.2/semantic.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.9.2/semantic.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/fomantic-ui/2.9.3/semantic.min.css">
+  <script src="https://cdn.bootcdn.net/ajax/libs/fomantic-ui/2.9.3/semantic.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/prism-themes/1.9.0/prism-vsc-dark-plus.min.css">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+  <link href="https://cdn.bootcdn.net/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcdn.net/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+  <link href="https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/prism.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.3/katex.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.8/katex.min.css">
   <script src="/js/main.js"></script>
 <meta name="generator" content="Hexo 6.3.0"></head>
 
-<body style="height: max-content;" class="ui-col">
-  <div id="dark-mode" onclick="dark_mode()">
-    🌓
-  </div>
-  <div class="ui-header ui-shadow" style="transition: all 0.3s ease; padding: 20px; background: var(--header-bgcol); z-index: 10; height: 60px; width: 100%;">
-    <div class="ui-row ui-space-between">
+<body>
+  <div id="dark-mode" onclick="dark_mode()">🌓</div>
+  <div id="aplayer-content"></div>
+  <div id="body">
+    <div class="ui-col">
+      <div id="header" class="ui-header ui-shadow">
+        <div class="ui-row ui-space-between">
   <div>
     <a href="/" style="color: var(--header-col);">Ftt2333&#39;s Nest</a>
   </div>
   <div class="ui-row">
     
     <div class="ui-row-space"></div>
-    <a href="/archives/" style="color: var(--header-col); margin: 2px;">
-      Archives
-    </a>
+    
+      <div class="ui dropdown">
+        <div style="color: var(--title-col);">友链<i class="dropdown icon"></i></div>
+        <div class="menu" style="width: max-content;">
+          
+            <a class="item" target="_blank" rel="noopener" href="https://enucai.github.io/" style="display: flex;">
+              
+                <img class="image" src="https://cdn.luogu.com.cn/upload/usericon/169574.png">
+              
+              <div style="flex: 1;"></div>
+              <div>Enucai</div>
+            </a>
+          
+            <a class="item" target="_blank" rel="noopener" href="https://cmk666.github.io/" style="display: flex;">
+              
+                <img class="image" src="https://cdn.luogu.com.cn/upload/usericon/127949.png">
+              
+              <div style="flex: 1;"></div>
+              <div>Cmk666</div>
+            </a>
+          
+            <a class="item" target="_blank" rel="noopener" href="https://cyb1010.github.io/" style="display: flex;">
+              
+                <img class="image" src="https://cdn.luogu.com.cn/upload/usericon/333119.png">
+              
+              <div style="flex: 1;"></div>
+              <div>Cyb1010</div>
+            </a>
+          
+            <a class="item" target="_blank" rel="noopener" href="https://red-black-tree.github.io/" style="display: flex;">
+              
+                <img class="image" src="https://cdn.luogu.com.cn/upload/usericon/173951.png">
+              
+              <div style="flex: 1;"></div>
+              <div>Rbtree</div>
+            </a>
+          
+            <a class="item" target="_blank" rel="noopener" href="https://zhouershan.github.io/" style="display: flex;">
+              
+                <img class="image" src="https://cdn.luogu.com.cn/upload/usericon/615348.png">
+              
+              <div style="flex: 1;"></div>
+              <div>Zhouershan</div>
+            </a>
+          
+        </div>
+      </div>
     
     <div class="ui-row-space"></div>
-    <a href="/categories/" style="color: var(--header-col); margin: 2px;">
-      Categories
-    </a>
+    
+      <a href="/archives/" style="color: var(--header-col); margin: 2px;">
+        归档
+      </a>
     
     <div class="ui-row-space"></div>
-    <a href="/tags/" style="color: var(--header-col); margin: 2px;">
-      Tags
-    </a>
+    
+      <a href="/categories/" style="color: var(--header-col); margin: 2px;">
+        分类
+      </a>
+    
+    <div class="ui-row-space"></div>
+    
+      <a href="/tags/" style="color: var(--header-col); margin: 2px;">
+        标签
+      </a>
     
   </div>
 </div>
-  </div>
-  <div class="ui-col-space-big"></div>
-  <div class="ui-col" style="height: max-content;">
-    <div class="ui-content">
-      <div class="ui-max-width ui-card ui-shadow">
+      </div>
+      <div style="height: 110px;"></div>
+      <div class="ui-col" style="height: max-content;">
+        <div class="ui-content">
+          <div class="ui-max-width ui-card ui-shadow">
   <div>
     <div class="ui-padding ui-col">
 <h1>我的缺省源</h1>
@@ -74,7 +131,7 @@
   <div class="ui-padding">
     <h2>献上代码！</h2>
 <h3>Header</h3>
-<p><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;bits/stdc++.h></span></span>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;bits/stdc++.h></span></span>
 <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifndef</span> <span class="token expression">LOCAL</span></span>
 <span class="token keyword">void</span> <span class="token function">debug</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
@@ -88,9 +145,9 @@
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifndef</span> <span class="token expression">LOCAL</span></span>
   cin<span class="token punctuation">.</span><span class="token function">tie</span><span class="token punctuation">(</span><span class="token keyword">nullptr</span><span class="token punctuation">)</span><span class="token operator">-></span><span class="token function">sync_with_stdio</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3>Debug</h3>
-<p><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifndef</span> <span class="token expression">MINE_DEBUG</span></span>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifndef</span> <span class="token expression">MINE_DEBUG</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">MINE_DEBUG</span></span>
 
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;bits/stdc++.h></span></span>
@@ -222,9 +279,10 @@ ostream<span class="token operator">&amp;</span> <span class="token keyword">ope
 <span class="token expression">debug_helper<span class="token double-colon punctuation">::</span><span class="token function">debug</span><span class="token punctuation">(</span>__VA_ARGS__<span class="token punctuation">)</span><span class="token punctuation">,</span> </span><span class="token punctuation">\</span>
 <span class="token expression">cerr <span class="token operator">&lt;&lt;</span> </span><span class="token char">'\n'</span></span>
 
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></p>
-
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
     <div id="comment" style="margin: auto;"></div>
+
+
 
 
 
@@ -233,17 +291,19 @@ ostream<span class="token operator">&amp;</span> <span class="token keyword">ope
 
   </div>
 </div>
-    </div>
-    <div class="ui-col-space-mid"></div>
-    <div>
-      <div class="ui-col">
+        </div>
+        <div class="ui-col-space-mid"></div>
+        <div>
+          <div class="ui-col">
   <p style="color: var(--footer-col); padding: 20px 30px;">
     Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a>,
-    theme by <a target="_blank" rel="noopener" href="https://gitlab.com/ftt2333/hexo-theme-facter">Facter</a>
+    theme by <a target="_blank" rel="noopener" href="https://github.com/ftt2333/hexo-theme-facter">Facter</a>
   </p>
 </div>
+        </div>
+        <div class="ui-col-space-mid"></div>
+      </div>
     </div>
-    <div class="ui-col-space-mid"></div>
   </div>
 </body>
 

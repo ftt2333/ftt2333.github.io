@@ -6,7 +6,8 @@
   --code-bgcol: rgba(34, 34, 34, 1);
   --font-col: #010101;
   --title-col: #444;
-  --background-img: url(https://s2.loli.net/2022/12/01/UwoNXvM1HYJTWK6.jpg);
+/*  --background-img: url(https://s2.loli.net/2022/12/01/UwoNXvM1HYJTWK6.jpg);*/
+  --background-img: url(https://www.loliapi.com/acg/);
   --dark-mode-bgcol: #100f2c;
   --background-col: #eaeaea;
   --footer-col: #010101;
@@ -26,13 +27,65 @@
 }
 
 blockquote {
-  border-left: 3px #666 solid;
+  border-left: 3px rgba(120, 120, 120, .3) solid;
   padding-left: 10px;
   margin: 10px 0 10px;
 }
 
-*:not(pre *):not(code *):not(a) {
+.ui {
+  border-radius: 0 !important;
+}
+.ui * {
+  border-radius: 0 !important;
+}
+
+#body *:not(pre *):not(code *):not(a):not(.ui) {
   color: var(--font-col);
+}
+
+.hbe-button-re {
+  display: block !important;
+  margin: auto !important;
+  margin-top: 10px !important;
+}
+.hbe-input-re {
+  display: block !important;
+  margin: 20px auto !important;
+  width: 60%;
+  border: 1px solid rgba(100, 100, 100, .3);
+}
+#hbePass {
+  padding: 15px;
+  width: 100%;
+  font-family: myFont;
+}
+
+body {
+  background-color: var(--background-col) !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+#body {
+/*  background-color: var(--background-col) !important;*/
+  min-height: 100%;
+  background-position: center !important;
+  background-image: var(--background-img) !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+#header {
+  position: fixed;
+  transition: all 0.3s ease;
+  padding: 20px;
+  background: var(--header-bgcol);
+  z-index: 10;
+  height: 60px;
+  width: 100%;
 }
 
 @font-face {
@@ -52,22 +105,17 @@ blockquote {
   user-select: none;
 }
 
-.content {
-  border: 2px solid #666;
-/*  border-radius: 5px;*/
-  padding: 0 15px !important;
-  margin-bottom: 15px;
+.ui.accordion>.content.border {
+  border: 1px solid rgba(120, 120, 120, .3);
+  padding: 10px 15px !important;
+}
+.ui.accordion {
+  margin-bottom: 10px;
 }
 
 .katex-display {
   overflow-x: auto;
   overflow-y: hidden;
-}
-
-.ui-header {
-  position: sticky;
-  top: 0;
-  left: 0;
 }
 
 .ui-col {
@@ -178,38 +226,9 @@ pre {
   padding: 1px 5px;
 }
 
-:not(pre)>code[class*=language-],
-pre[class*=language-] {
-  background-color: var(--code-bgcol) !important;
-}
-
-td {
-  padding: 5px;
-  border: 1px rgba(0, 0, 0, .2) solid;
-}
-
-th {
-  padding: 5px;
-  border: 1px rgba(0, 0, 0, .2) solid;
-}
-
-table {
-  border-spacing: 0;
-  border: 1px rgba(0, 0, 0, .2) solid;
-}
-
 iframe {
   margin: 5px;
   border: 0;
-}
-
-body {
-  background-color: var(--background-col);
-  /*background-image: var(--background-img);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;*/
 }
 
 #dark-mode {
@@ -229,4 +248,28 @@ body {
   align-items: center;
   user-select: none;
   z-index: 114514;
+}
+
+#sidebar-toggle {
+  transition: all 0.3s ease;
+  font-size: 20px;
+  background: var(--dark-mode-bgcol);
+  width: 55px;
+  height: 55px;
+  position: fixed;
+  border-radius: 50%;
+  right: 32px;
+  bottom: 100px;
+  left: unset;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  z-index: 114514;
+}
+
+#siedbar {
+  width: 100px;
+  background-color: var(--card-bgcol);
 }

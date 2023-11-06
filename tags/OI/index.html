@@ -6,54 +6,165 @@
   <meta name="viewport" content="width = device-width, initial-scale = 1.0">
   <title>Ftt2333&#39;s Nest</title>
   <link rel="icon" href="/images/favicon.ico">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.9.2/semantic.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.9.2/semantic.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/fomantic-ui/2.9.3/semantic.min.css">
+  <script src="https://cdn.bootcdn.net/ajax/libs/fomantic-ui/2.9.3/semantic.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/prism-themes/1.9.0/prism-vsc-dark-plus.min.css">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+  <link href="https://cdn.bootcdn.net/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcdn.net/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+  <link href="https://cdn.bootcdn.net/ajax/libs/aplayer/1.10.1/APlayer.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/prism.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.3/katex.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
+  <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.8/katex.min.css">
   <script src="/js/main.js"></script>
 <meta name="generator" content="Hexo 6.3.0"></head>
 
-<body style="height: max-content;" class="ui-col">
-  <div id="dark-mode" onclick="dark_mode()">
-    🌓
-  </div>
-  <div class="ui-header ui-shadow" style="transition: all 0.3s ease; padding: 20px; background: var(--header-bgcol); z-index: 10; height: 60px; width: 100%;">
-    <div class="ui-row ui-space-between">
+<body>
+  <div id="dark-mode" onclick="dark_mode()">🌓</div>
+  <div id="aplayer-content"></div>
+  <div id="body">
+    <div class="ui-col">
+      <div id="header" class="ui-header ui-shadow">
+        <div class="ui-row ui-space-between">
   <div>
     <a href="/" style="color: var(--header-col);">Ftt2333&#39;s Nest</a>
   </div>
   <div class="ui-row">
     
     <div class="ui-row-space"></div>
-    <a href="/archives/" style="color: var(--header-col); margin: 2px;">
-      Archives
-    </a>
+    
+      <div class="ui dropdown">
+        <div style="color: var(--title-col);">友链<i class="dropdown icon"></i></div>
+        <div class="menu" style="width: max-content;">
+          
+            <a class="item" target="_blank" rel="noopener" href="https://enucai.github.io/" style="display: flex;">
+              
+                <img class="image" src="https://cdn.luogu.com.cn/upload/usericon/169574.png">
+              
+              <div style="flex: 1;"></div>
+              <div>Enucai</div>
+            </a>
+          
+            <a class="item" target="_blank" rel="noopener" href="https://cmk666.github.io/" style="display: flex;">
+              
+                <img class="image" src="https://cdn.luogu.com.cn/upload/usericon/127949.png">
+              
+              <div style="flex: 1;"></div>
+              <div>Cmk666</div>
+            </a>
+          
+            <a class="item" target="_blank" rel="noopener" href="https://cyb1010.github.io/" style="display: flex;">
+              
+                <img class="image" src="https://cdn.luogu.com.cn/upload/usericon/333119.png">
+              
+              <div style="flex: 1;"></div>
+              <div>Cyb1010</div>
+            </a>
+          
+            <a class="item" target="_blank" rel="noopener" href="https://red-black-tree.github.io/" style="display: flex;">
+              
+                <img class="image" src="https://cdn.luogu.com.cn/upload/usericon/173951.png">
+              
+              <div style="flex: 1;"></div>
+              <div>Rbtree</div>
+            </a>
+          
+            <a class="item" target="_blank" rel="noopener" href="https://zhouershan.github.io/" style="display: flex;">
+              
+                <img class="image" src="https://cdn.luogu.com.cn/upload/usericon/615348.png">
+              
+              <div style="flex: 1;"></div>
+              <div>Zhouershan</div>
+            </a>
+          
+        </div>
+      </div>
     
     <div class="ui-row-space"></div>
-    <a href="/categories/" style="color: var(--header-col); margin: 2px;">
-      Categories
-    </a>
+    
+      <a href="/archives/" style="color: var(--header-col); margin: 2px;">
+        归档
+      </a>
     
     <div class="ui-row-space"></div>
-    <a href="/tags/" style="color: var(--header-col); margin: 2px;">
-      Tags
-    </a>
+    
+      <a href="/categories/" style="color: var(--header-col); margin: 2px;">
+        分类
+      </a>
+    
+    <div class="ui-row-space"></div>
+    
+      <a href="/tags/" style="color: var(--header-col); margin: 2px;">
+        标签
+      </a>
     
   </div>
 </div>
-  </div>
-  <div class="ui-col-space-big"></div>
-  <div class="ui-col" style="height: max-content;">
-    <div class="ui-content">
-      <div class="ui-col">
+      </div>
+      <div style="height: 110px;"></div>
+      <div class="ui-col" style="height: max-content;">
+        <div class="ui-content">
+          <div class="ui-col">
   <div class="ui-card ui-shadow" style="font-size: 40px; padding: 20px 80px;">
     <p style=" color: var(--title-col);">Tag: OI</p>
   </div>
   <div class="ui-col-space-big"></div>
   <div class="ui-col">
+  
+  
+  <div class="ui-full-width ui-card ui-shadow">
+    <div class="ui-row ui-space-between ui-padding">
+      <div>
+        <h3>水题乱做-2</h3>
+        创建于2023-11-04
+      </div>
+      <div>
+        <a href="/2023/11/04/水题乱做-2/" style="padding: 10px;">
+          MORE...
+        </a>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="ui-col-space-mid"></div>
+  
+  
+  <div class="ui-full-width ui-card ui-shadow">
+    <div class="ui-row ui-space-between ui-padding">
+      <div>
+        <h3>洛谷-P5538</h3>
+        创建于2023-10-07
+      </div>
+      <div>
+        <a href="/2023/10/07/洛谷-P5538/" style="padding: 10px;">
+          MORE...
+        </a>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="ui-col-space-mid"></div>
+  
+  
+  <div class="ui-full-width ui-card ui-shadow">
+    <div class="ui-row ui-space-between ui-padding">
+      <div>
+        <h3>图论相关</h3>
+        创建于2023-09-23
+      </div>
+      <div>
+        <a href="/2023/09/23/图论相关/" style="padding: 10px;">
+          MORE...
+        </a>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="ui-col-space-mid"></div>
   
   
   <div class="ui-full-width ui-card ui-shadow">
@@ -77,11 +188,11 @@
   <div class="ui-full-width ui-card ui-shadow">
     <div class="ui-row ui-space-between ui-padding">
       <div>
-        <h3>水题乱做</h3>
+        <h3>水题乱做-1</h3>
         创建于2023-09-15
       </div>
       <div>
-        <a href="/2023/09/15/水题乱做/" style="padding: 10px;">
+        <a href="/2023/09/15/水题乱做-1/" style="padding: 10px;">
           MORE...
         </a>
       </div>
@@ -95,11 +206,11 @@
   <div class="ui-full-width ui-card ui-shadow">
     <div class="ui-row ui-space-between ui-padding">
       <div>
-        <h3>P9283</h3>
+        <h3>洛谷-P9283</h3>
         创建于2023-04-29
       </div>
       <div>
-        <a href="/2023/04/29/P9283/" style="padding: 10px;">
+        <a href="/2023/04/29/洛谷-P9283/" style="padding: 10px;">
           MORE...
         </a>
       </div>
@@ -149,11 +260,11 @@
   <div class="ui-full-width ui-card ui-shadow">
     <div class="ui-row ui-space-between ui-padding">
       <div>
-        <h3>P1397</h3>
+        <h3>洛谷-P1397</h3>
         创建于2022-11-29
       </div>
       <div>
-        <a href="/2022/11/29/P1397/" style="padding: 10px;">
+        <a href="/2022/11/29/洛谷-P1397/" style="padding: 10px;">
           MORE...
         </a>
       </div>
@@ -167,65 +278,11 @@
   <div class="ui-full-width ui-card ui-shadow">
     <div class="ui-row ui-space-between ui-padding">
       <div>
-        <h3>ABC278G</h3>
+        <h3>AtCoder_abc278_g</h3>
         创建于2022-11-21
       </div>
       <div>
-        <a href="/2022/11/21/ABC278G/" style="padding: 10px;">
-          MORE...
-        </a>
-      </div>
-    </div>
-    
-  </div>
-  
-  <div class="ui-col-space-mid"></div>
-  
-  
-  <div class="ui-full-width ui-card ui-shadow">
-    <div class="ui-row ui-space-between ui-padding">
-      <div>
-        <h3>CF1768F</h3>
-        创建于2022-11-21
-      </div>
-      <div>
-        <a href="/2022/11/21/CF1768F/" style="padding: 10px;">
-          MORE...
-        </a>
-      </div>
-    </div>
-    
-  </div>
-  
-  <div class="ui-col-space-mid"></div>
-  
-  
-  <div class="ui-full-width ui-card ui-shadow">
-    <div class="ui-row ui-space-between ui-padding">
-      <div>
-        <h3>ARC114F</h3>
-        创建于2022-11-10
-      </div>
-      <div>
-        <a href="/2022/11/10/ARC114F/" style="padding: 10px;">
-          MORE...
-        </a>
-      </div>
-    </div>
-    
-  </div>
-  
-  <div class="ui-col-space-mid"></div>
-  
-  
-  <div class="ui-full-width ui-card ui-shadow">
-    <div class="ui-row ui-space-between ui-padding">
-      <div>
-        <h3>P2463</h3>
-        创建于2022-10-16
-      </div>
-      <div>
-        <a href="/2022/10/16/P2463/" style="padding: 10px;">
+        <a href="/2022/11/21/AtCoder_abc278_g/" style="padding: 10px;">
           MORE...
         </a>
       </div>
@@ -250,17 +307,19 @@
 </div>
 
 </div>
-    </div>
-    <div class="ui-col-space-mid"></div>
-    <div>
-      <div class="ui-col">
+        </div>
+        <div class="ui-col-space-mid"></div>
+        <div>
+          <div class="ui-col">
   <p style="color: var(--footer-col); padding: 20px 30px;">
     Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a>,
-    theme by <a target="_blank" rel="noopener" href="https://gitlab.com/ftt2333/hexo-theme-facter">Facter</a>
+    theme by <a target="_blank" rel="noopener" href="https://github.com/ftt2333/hexo-theme-facter">Facter</a>
   </p>
 </div>
+        </div>
+        <div class="ui-col-space-mid"></div>
+      </div>
     </div>
-    <div class="ui-col-space-mid"></div>
   </div>
 </body>
 
