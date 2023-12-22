@@ -26,6 +26,17 @@
   --innercode-col-rev: #eaeaea;
 }
 
+.dropdown-icon::before {
+  content: "\f0d7";
+  font-family: Dropdown;
+  background: 0 0;
+  box-sizing: inherit;
+  font-size: .85714286em;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+
 blockquote {
   border-left: 3px rgba(120, 120, 120, .3) solid;
   padding-left: 10px;
