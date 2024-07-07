@@ -26,6 +26,10 @@
   --innercode-col-rev: #eaeaea;
 }
 
+p {
+  margin: 1em 0;
+}
+
 .dropdown-icon::before {
   content: "\f0d7";
   font-family: Dropdown;
